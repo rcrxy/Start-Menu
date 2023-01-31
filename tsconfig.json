@@ -1,0 +1,39 @@
+{
+   "extends": "@vue/tsconfig/tsconfig.web.json",
+   "exclude": ["node_modules", "dist"],
+   "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+   "compilerOptions": {
+      "target": "esnext",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "strict": true,
+      "jsx": "preserve",
+      "sourceMap": true,
+      "resolveJsonModule": true,
+      "isolatedModules": false,
+      "useDefineForClassFields": true,
+      "forceConsistentCasingInFileNames": true,
+      "allowSyntheticDefaultImports": true,
+      "diagnostics": true,
+      "skipLibCheck": true,
+      "allowJs": true, // 允许编译器编译JS，JSX文件
+      "checkJs": true, // 允许在JS文件中报错，通常与allowJS一起使用
+      "lib": ["esnext", "dom", "WebWorker", "DOM"],
+      "baseUrl": "./",
+      "paths": {
+         "@/*": ["./src/*"],
+         "@img/*": ["./src/assets/images/*"],
+         "@views/*": ["./src/views/*"],
+         "@service/*": ["./src/service/*"]
+      }
+      // "typeRoots": ["./node_modules/@types", "./src/types"]
+      // "types": []
+   },
+
+   "references": [
+      {
+         "path": "./tsconfig.config.json"
+      }
+   ]
+}
